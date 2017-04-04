@@ -1,0 +1,46 @@
+http://localhost:8080/pentaho/api/system/refresh/mondrianSchemaCache
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SampleData
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SteelWheels
+
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache
+
+In this API Call the result will be 200. Status 200 = OK
+
+
+Pentaho's Link:
+
+How to clear Mondrian Schema Cache using a Web Service
+https://support.pentaho.com/hc/en-us/articles/205790189-How-to-clear-Mondrian-Schema-Cache-using-a-Web-Service-
+
+How to clear Mondrian and Analyzer Cache per Cube using a Web Service
+https://support.pentaho.com/hc/en-us/articles/205789899-How-to-clear-Mondrian-and-Analyzer-Cache-per-Cube-using-a-Web-Service
+
+How to Clear Mondrian Schema Cache using Xaction and PDI in 5.3
+https://support.pentaho.com/hc/en-us/articles/205793029-How-to-Clear-Mondrian-Schema-Cache-using-Xaction-and-PDI-in-5-3
+
+How to Clear Mondrian Schema Cache using a Xaction
+https://support.pentaho.com/hc/en-us/articles/209629623-How-to-Clear-Mondrian-Schema-Cache-using-a-Xaction
+
+Using Web Service to clear Mondrian and Analyzer Cache per Cube
+https://support.pentaho.com/hc/en-us/articles/205788259-Using-Web-Service-to-clear-Mondrian-and-Analyzer-Cache-per-Cube
+
+How to Disable Mondrian Cache
+https://support.pentaho.com/hc/en-us/articles/205788179-How-to-Disable-Mondrian-Cache-
+
+How to clear Mondrian Schema Cache using CURL
+https://support.pentaho.com/hc/en-us/articles/205793339-How-to-clear-Mondrian-Schema-Cache-using-CURL
+
+Best Practices - Mondrian Cache Management
+https://support.pentaho.com/hc/en-us/articles/115000566966-Best-Practices-Mondrian-Cache-Management
+
+Clear Mondrian Schema Cache Using a Public Schedule
+https://support.pentaho.com/hc/en-us/articles/205783069-Clear-Mondrian-Schema-Cache-Using-a-Public-Schedule
+
+Refresh Mondrian Schema Cache from Linux's Command Line
+https://support.pentaho.com/hc/en-us/articles/205782829-Refresh-Mondrian-Schema-Cache-from-Linux-s-Command-Line
+
+How to Prime Mondrian Schema Cache
+https://support.pentaho.com/hc/en-us/articles/205790319-How-to-Prime-Mondrian-Schema-Cache-
+
+Links:
+https://herwinrayen.wordpress.com/2011/05/07/mondrian-cache-refresh-in-bi-server/
