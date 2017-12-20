@@ -446,8 +446,8 @@ http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache
 http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SteelWheels
 
 </note>
-      <xloc>104</xloc>
-      <yloc>437</yloc>
+      <xloc>80</xloc>
+      <yloc>368</yloc>
       <width>657</width>
       <heigth>210</heigth>
       <fontname>Segoe UI</fontname>
@@ -597,7 +597,7 @@ http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalo
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <url>http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SteelWheels</url>
+    <url>http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache</url>
     <urlInField>N</urlInField>
     <urlField/>
     <encoding>UTF-8</encoding>
