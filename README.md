@@ -3,7 +3,7 @@ ETL using PDI to update Mondrian Cache for Pentaho 7
 
 
 # known issues
-French Special Characters in the password like é
+French Special Characters in the password like <b>é</b>
 
 # Error log:
 ```
