@@ -7,7 +7,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#x2f;</directory>
+    <directory>/</directory>
     <parameters>
     </parameters>
     <log>
@@ -428,13 +428,41 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2017&#x2f;04&#x2f;04 13&#x3a;59&#x3a;13.356</created_date>
+    <created_date>2017/04/04 13:59:13.356</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2017&#x2f;04&#x2f;04 13&#x3a;59&#x3a;13.356</modified_date>
-    <key_for_session_key/>
+    <modified_date>2017/04/04 13:59:13.356</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>http://localhost:8080/pentaho/api/system/refresh/mondrianSchemaCache
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SampleData
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SteelWheels
+
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache
+
+
+http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SteelWheels</note>
+      <xloc>140</xloc>
+      <yloc>565</yloc>
+      <width>657</width>
+      <heigth>170</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
     <hop>
@@ -444,11 +472,11 @@
     </hop>
     <hop>
       <from>HTTP Client - Call Mondrian Clear Cache API</from>
-      <to>Switch &#x2f; Case - If resultset &#x3d; true</to>
+      <to>Switch / Case - If resultset = true</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Switch &#x2f; Case - If resultset &#x3d; true</from>
+      <from>Switch / Case - If resultset = true</from>
       <to>Write to log - True</to>
       <enabled>Y</enabled>
     </hop>
@@ -458,7 +486,7 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Switch &#x2f; Case - If resultset &#x3d; true</from>
+      <from>Switch / Case - If resultset = true</from>
       <to>Write to log - False</to>
       <enabled>Y</enabled>
     </hop>
@@ -474,15 +502,172 @@
     </hop>
     <hop>
       <from>Filter rows</from>
-      <to>200 &#x3d; True</to>
+      <to>200 = True</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter rows</from>
-      <to>200 &#x3d; False</to>
+      <to>200 = False</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>200 = False</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>200 = True</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>384</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Data Grid</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>url</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>http://localhost:8080/pentaho/api/repos/xanalyzer/service/ajax/clearCache?catalog=SteelWheels</item>
+      </line>
+    </data>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>64</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>False</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>200 = True</send_true_to>
+    <send_false_to>200 = False</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>statuscode</leftvalue>
+        <function>=</function>
+        <rightvalue/>
+        <value>
+          <name>constant</name>
+          <type>Integer</type>
+          <text>200</text>
+          <length>-1</length>
+          <precision>0</precision>
+          <isnull>N</isnull>
+          <mask>#;-#</mask>
+        </value>
+      </condition>
+    </compare>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>480</xloc>
+      <yloc>416</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>HTTP Client - Call Mondrian Clear Cache API</name>
     <type>HTTP</type>
@@ -498,7 +683,7 @@
     <urlInField>Y</urlInField>
     <urlField>url</urlField>
     <encoding>UTF-8</encoding>
-    <httpLogin>admin</httpLogin>
+    <httpLogin>Admin</httpLogin>
     <httpPassword>Encrypted 2be98afc86aa7f2e4bb18bd63c99dbdde</httpPassword>
     <proxyHost/>
     <proxyPort/>
@@ -533,11 +718,10 @@
       <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Data Grid</name>
-    <type>DataGrid</type>
+    <name>Switch / Case - If resultset = true</name>
+    <type>SwitchCase</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -546,22 +730,19 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <fields>
-      <field>
-        <name>url</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <data>
-      <line> <item>http&#x3a;&#x2f;&#x2f;localhost&#x3a;8080&#x2f;pentaho&#x2f;api&#x2f;system&#x2f;refresh&#x2f;mondrianSchemaCache</item> </line>
-    </data>
+    <fieldname>result</fieldname>
+    <use_contains>N</use_contains>
+    <case_value_type>String</case_value_type>
+    <case_value_format/>
+    <case_value_decimal/>
+    <case_value_group/>
+    <default_target_step>Write to log - False</default_target_step>
+    <cases>
+      <case>
+        <value>200</value>
+        <target_step>Write to log - True</target_step>
+      </case>
+    </cases>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -570,12 +751,11 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>32</yloc>
+      <xloc>384</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>True</name>
     <type>Dummy</type>
@@ -599,11 +779,10 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
-    <name>Switch &#x2f; Case - If resultset &#x3d; true</name>
-    <type>SwitchCase</type>
+    <name>Write to log - False</name>
+    <type>WriteToLog</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -612,40 +791,19 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-<fieldname>result</fieldname>
-<use_contains>N</use_contains>
-<case_value_type>Integer</case_value_type>
-<case_value_format/>
-<case_value_decimal/>
-<case_value_group/>
-<default_target_step>Write to log - False</default_target_step>
-<cases><case><value>200</value>
-<target_step>Write to log - True</target_step>
-</case></cases>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
-      <yloc>96</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>False</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
+    <loglevel>log_level_basic</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage>Cache was not cleared with success.</logmessage>
+    <fields>
+      <field>
+        <name>url</name>
+      </field>
+      <field>
+        <name>result</name>
+      </field>
+    </fields>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -654,12 +812,11 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
+      <xloc>832</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
+  </step>
   <step>
     <name>Write to log - True</name>
     <type>WriteToLog</type>
@@ -671,19 +828,19 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-      <loglevel>log_level_basic</loglevel>
-      <displayHeader>Y</displayHeader>
-      <limitRows>N</limitRows>
-      <limitRowsNumber>0</limitRowsNumber>
-      <logmessage>Cache cleared with success</logmessage>
+    <loglevel>log_level_basic</loglevel>
+    <displayHeader>Y</displayHeader>
+    <limitRows>N</limitRows>
+    <limitRowsNumber>0</limitRowsNumber>
+    <logmessage>Cache cleared with success</logmessage>
     <fields>
       <field>
         <name>url</name>
-        </field>
+      </field>
       <field>
         <name>result</name>
-        </field>
-      </fields>
+      </field>
+    </fields>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -696,131 +853,7 @@
       <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
-    </step>
-
-  <step>
-    <name>Write to log - False</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <loglevel>log_level_basic</loglevel>
-      <displayHeader>Y</displayHeader>
-      <limitRows>N</limitRows>
-      <limitRowsNumber>0</limitRowsNumber>
-      <logmessage>Cache was not cleared with success.</logmessage>
-    <fields>
-      <field>
-        <name>url</name>
-        </field>
-      <field>
-        <name>result</name>
-        </field>
-      </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>832</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>200 &#x3d; True</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>736</xloc>
-      <yloc>384</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-<send_true_to>200 &#x3d; True</send_true_to>
-<send_false_to>200 &#x3d; False</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>statuscode</leftvalue>
- <function>&#x3d;</function>
- <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>200</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
-    </compare>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>480</xloc>
-      <yloc>416</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>200 &#x3d; False</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>736</xloc>
-      <yloc>480</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
+  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
